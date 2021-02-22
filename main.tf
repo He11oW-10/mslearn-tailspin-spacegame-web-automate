@@ -1,12 +1,18 @@
 terraform {
   required_version = "> 0.12.0"
-
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.43.0"
+    }
+  }
   backend "azurerm" {
   }
 }
 
 provider "azurerm" {
-  version = ">=2.0.0"
+  tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47"
+  subscription_id="7bfee15b-b0d8-489b-89d7-604bbd66603a"
   features {}
 }
 
